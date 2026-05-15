@@ -245,7 +245,7 @@ h2 {
 .footer {
     border-top: 1px solid var(--border-color);
     padding: 60px 0;
-    background: #000;
+    background: #f3f3f3;
 }
 
 .footer-content {
@@ -274,7 +274,10 @@ h2 {
 
 /* Мобильная адаптивность */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -286,17 +289,229 @@ h2 {
         padding: 20px 0;
         border-bottom: 1px solid var(--border-color);
     }
+
     .nav-links.active {
         display: flex;
     }
+
     .mobile-menu-btn {
         display: block;
     }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-right {
         text-align: center;
+    }
+}
+
+:root {
+    --bg-color: #ffffff;
+    --section-bg: #fbfbfd;
+    --text-color: #1d1d1f;
+    --text-muted: #6e6e73;
+    --accent-color: #0071e3;
+    --border-color: #d2d2d7;
+    --card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, system-ui, sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.bg-light {
+    background: var(--section-bg);
+}
+
+/* Навигация */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.btn-github {
+    background: #000;
+    color: #fff !important;
+    padding: 5px 12px;
+    border-radius: 12px;
+}
+
+/* Hero */
+.hero {
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.student-info {
+    background: var(--section-bg);
+    padding: 15px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    margin: 20px 0;
+}
+
+/* Сетка "О себе" */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.about-column h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+/* Стек технологий */
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-category h4 {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: #f2f2f7;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e5e5ea;
+}
+
+/* Таймлайн */
+.timeline {
+    border-left: 2px solid var(--border-color);
+    padding-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.timeline-item .date {
+    font-size: 12px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.timeline-item h4 {
+    margin: 5px 0;
+}
+
+.timeline-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Карточки проектов и компетенций */
+.projects-grid,
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card,
+.comp-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.badge {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
     }
 }
