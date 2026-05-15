@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Сюбаев Андрей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Портфолио</a>
+            <nav class="nav-links">
+                <a href="#about">О себе</a>
+                <a href="#competences">ОК, ПК и ДПК</a>
+                <a href="#projects">Проекты</a>
+                <a href="https://github.com/andreysyubaev" target="_blank" class="btn-github">GitHub</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <section id="about" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="subtitle">Министерство образования и молодежной политики Свердловской области</p>
+                <h1>Портфолио студента ГАПОУ СО «ЕКТС»</h1>
+                <p class="specialty">Специальность 09.02.07 "Информационные системы и программирование"</p>
+                <div class="student-info">
+                    <p><strong>Студент:</strong> Сюбаев Андрей Евгеньевич</p>
+                    <p><strong>Группа:</strong> ПР-42</p>
+                </div>
+               
+            </div>
+             <a href="#projects" class="btn-primary">Смотреть проекты</a>
+        </div>
+    </section>
+
+    <section id="competences" class="section">
+        <div class="container">
+            <h2>Перечень ОК, ПК и ДПК</h2>
+            <div class="competences-grid">
+                <div class="comp-card">
+                    <h3>Общие компетенции (ОК)</h3>
+                    <ul>
+                        <li><strong>ОК 01.</strong> Выбирать способы решения задач профессиональной деятельности.</li>
+                        <li><strong>ОК 02.</strong> Использовать современные средства поиска и анализа информации.</li>
+                        <li><strong>ОК 03.</strong> Планировать профессиональное развитие.</li>
+                        <li><strong>ОК 04.</strong> Эффективно взаимодействовать в команде.</li>
+                    </ul>
+                </div>
+                <div class="comp-card">
+                    <h3>Профессиональные компетенции (ПК)</h3>
+                    <ul>
+                        <li><strong>ПК 1.1 - 1.6.</strong> Разработка, отладка и тестирование программных модулей, рефакторинг, разработка для мобильных платформ.</li>
+                        <li><strong>ПК 4.1 - 4.4.</strong> Обслуживание и защита ПО компьютерных систем.</li>
+                        <li><strong>ПК 11.1 - 11.6.</strong> Проектирование, реализация и администрирование баз данных.</li>
+                    </ul>
+                </div>
+                <div class="comp-card">
+                    <h3>Дополнительные (ДПК)</h3>
+                    <ul>
+                        <li><strong>ДПК 2.1.</strong> Использование паттернов проектирования и архитектуры (MVC, Entity Framework).</li>
+                        <li><strong>ДПК 2.2.</strong> Уверенная работа с системами контроля версий (Git).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2>Мои проекты</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="badge">Веб-приложение</span>
+                        <h3>Интернет-магазин для напольных покрытий</h3>
+                        <p>Удобная система навигации, поиск, фильтрация и сортировка товаров. Реализована система аккаунтов. Особое внимание уделено UX/UI.</p>
+                        <a href="https://github.com/Molni9team/royce-react-site.git" target="_blank" class="btn-link">Проект GitHub ➔</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="badge">Мобильное приложение</span>
+                        <h3>Корпоративный мессенджер</h3>
+                        <p>Кроссплатформенный мессенджер для iOS и Android. Предназначен для удобной и быстрой коммуникации сотрудников внутри компании.</p>
+                        <a href="https://github.com/andreysyubaev/zoko-company-messenger.git" target="_blank" class="btn-link">Проект GitHub ➔</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="badge">Десктопное приложение</span>
+                        <h3>Приложение "Магазин электроники"</h3>
+                        <p>Использование C#, WPF и Entity Framework Core (Code First). Система ролей, управление товарами, поиск, фильтрация данных.</p>
+                        <a href="https://github.com/andreysyubaev/efcore-dbfirst.git" target="_blank" class="btn-link">Проект GitHub ➔</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h2>Мой GitHub аккаунт</h2>
+                <p>Для ознакомления с остальными работами</p>
+                <a href="https://github.com/andreysyubaev" target="_blank" class="btn-github mt-1">Перейти на GitHub</a>
+            </div>
+            <div class="footer-right">
+                <p>© 2026 Портфолио</p>
+                <a href="mailto:andrey.syuabev67@gmail.com">andrey.syuabev67@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
